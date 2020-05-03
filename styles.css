@@ -1,0 +1,97 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: aliceblue;
+}
+
+#container #clock {
+  width: 250px;
+  height: 250px;
+  /*border: 5px solid black;*/
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, .6);
+  border-radius: 0;
+  border: 10px solid black;
+  border-radius: 50%;
+  background: url(./new_umbrella.png) no-repeat;
+  background-size: 100%;
+}
+
+#clock .dot {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  top: 120px;
+  left: 120px;
+  background-color: azure;
+  z-index: 2;
+}
+
+#clock .hour, #clock .minute, #clock .second {
+  position: relative;
+  background-color: #000;
+  border-radius: 2px;
+  transform-origin: 50% 0;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .8);
+  z-index: 1;
+}
+
+#clock .minute {
+  width: 4px;
+  height: 110px;
+  left: 123px;
+  top: 115px;
+}
+
+#clock .hour {
+  width: 4px;
+  height: 75px;
+  top: 5px;
+  left: 123px;
+}
+
+#clock .second {
+  width: 2px;
+  height: 120px;
+  top: -90px;
+  left: 124px;
+  background-color: red;
+  transform-origin: 50% 20px;
+}
+
+#clock .minidisplay {
+  position: relative;
+  z-index: 0;
+  left: 80px;
+  top: -165px;
+  width: 90px;
+  height: 40px;
+  background-color:#fff;
+  border-radius: 5px;
+  box-shadow: inset 0 -1px 5px rgba(0, 0, 0, .6);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Ubuntu', sans-serif;
+}
